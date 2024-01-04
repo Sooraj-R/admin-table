@@ -25,14 +25,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-        <AdminContainer/>
-          {/* {posts.map((post) => (
-            <div key={post.id}>
-              <h3>
-                <span>{post.id}</span> {post.title}
-              </h3>
-            </div>
-          ))} */}
+      <AdminContainer />
     </Provider>
 
   );

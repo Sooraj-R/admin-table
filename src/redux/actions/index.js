@@ -115,7 +115,7 @@ const filteredFromDate = (payload) => (
         payload
     }
 );
-const setId = (payload) =>({
+const setId = (payload) => ({
     type: types.SET_ID,
     payload
 });

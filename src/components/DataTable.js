@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { connect } from 'react-redux'
 import { compose } from 'recompose';
-import { deleteRecord as deleteDataAction} from '../redux/actions'
+import { deleteRecord as deleteDataAction } from '../redux/actions'
 import { isEmpty, capitalize } from 'lodash';
 import InputForm from './InputForm'
 
@@ -67,7 +67,7 @@ function EnhancedTableHead(props) {
               direction={headCell.id === 'date' && orderBy === headCell.id ? order : 'asc'}
               onClick={headCell.id === 'date' ? createSortHandler(headCell.id) : null}
               hideSortIcon={headCell.id === 'date' ? false : true}
-              style={{whiteSpace: 'break-spaces'}}
+              style={{ whiteSpace: 'break-spaces' }}
             >
               {headCell.label}
             </TableSortLabel>
@@ -144,7 +144,7 @@ const DataTable = (props) => {
       numeric: false,
     },
   ];
-  
+
   const [order, setOrder] = useState('asc');
   const [orderBy, setOrderBy] = useState('calories');
   const [page, setPage] = useState(0);
@@ -154,9 +154,9 @@ const DataTable = (props) => {
   const [editRowData, setEditRowData] = useState()
   const [onDelete, setOnDelete] = useState(false)
   useEffect(() => {
-    if (!isEmpty(dashBoardRecord.dashBoardData.dashboard_data)){
+    if (!isEmpty(dashBoardRecord.dashBoardData.dashboard_data)) {
       setRecords(dashBoardRecord.dashBoardData.dashboard_data)
-    }else{
+    } else {
       setRecords([])
     }
   }, [dashBoardRecord])
@@ -168,16 +168,16 @@ const DataTable = (props) => {
   };
   const [open, setOpen] = useState(false);
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleClick = (event, editId) => {
-    if(!onDelete){
-    const data = rows.find((d) => d.id === editId)
-    setEditRowData(data)
-    setOpen(true);
-    }else{
+    if (!onDelete) {
+      const data = rows.find((d) => d.id === editId)
+      setEditRowData(data)
+      setOpen(true);
+    } else {
       setOpen(false);
     }
   };
@@ -202,7 +202,7 @@ const DataTable = (props) => {
     [order, orderBy, page, rowsPerPage, rows],
   );
 
-  const deleteRecord = (e,id) => {
+  const deleteRecord = (e, id) => {
     e.preventDefault()
     setOnDelete(true)
     deleteData(id)
@@ -210,83 +210,83 @@ const DataTable = (props) => {
 
   return (
     <>
-    <Box sx={{ width: '100%' }}>
-      <Paper sx={{ width: '100%', mb: 2, p: 2 }}>
-        <TableContainer>
-          <Table
-            sx={{ minWidth: 750 }}
-            aria-labelledby="tableTitle"
-          >
-            <EnhancedTableHead
-              order={order}
-              orderBy={orderBy}
-              onRequestSort={handleRequestSort}
-              rowCount={rows && rows.length}
-              headCells={headCells}
-            />
-            <TableBody>
-              {!isEmpty(rows) && visibleRows.map((row, index) => {
+      <Box sx={{ width: '100%' }}>
+        <Paper sx={{ width: '100%', mb: 2, p: 2 }}>
+          <TableContainer>
+            <Table
+              sx={{ minWidth: 750 }}
+              aria-labelledby="tableTitle"
+            >
+              <EnhancedTableHead
+                order={order}
+                orderBy={orderBy}
+                onRequestSort={handleRequestSort}
+                rowCount={rows && rows.length}
+                headCells={headCells}
+              />
+              <TableBody>
+                {!isEmpty(rows) && visibleRows.map((row, index) => {
 
-                const labelId = `enhanced-table-checkbox-${index}`;
-                let key = Object.keys(row)
-                return (
+                  const labelId = `enhanced-table-checkbox-${index}`;
+                  let key = Object.keys(row)
+                  return (
+                    <TableRow
+                      hover
+                      tabIndex={-1}
+                      key={row.id}
+                      sx={{ cursor: 'pointer' }}
+                    >
+                      {key.map((k, index) => {
+                        return (
+                          <TableCell
+                            component="th"
+                            id={labelId}
+                            scope="row"
+                            onClick={(event) => handleClick(event, row.id)}
+                            align={k === 'amount' ? "right" : "left"}
+                          >
+                            {capitalize(row[k])}
+                          </TableCell>)
+
+                      })}
+                      <TableCell
+                        component="th"
+                        id={labelId}
+                        scope="row"
+                      >
+                        <IconButton variant="outlined" color="inherit" style={{ height: '36px' }}
+                        >
+                          <CancelOutlinedIcon onClick={(e) => deleteRecord(e, row.id)} />
+                        </IconButton>
+                      </TableCell>
+                    </TableRow>
+                  );
+                }
+                )}
+                {emptyRows > 0 && (
                   <TableRow
-                    hover
-                    tabIndex={-1}
-                    key={row.id}
-                    sx={{ cursor: 'pointer' }}
+                    style={{
+                      height: (53) * emptyRows,
+                    }}
                   >
-                    {key.map((k, index) => {
-                      return (
-                        <TableCell
-                          component="th"
-                          id={labelId}
-                          scope="row"
-                          onClick={(event) => handleClick(event, row.id)}
-                          align= {k === 'amount' ? "right" : "left"}
-                        >
-                          {capitalize(row[k])}
-                        </TableCell>)
-                        
-                    })}
-                     <TableCell
-                          component="th"
-                          id={labelId}
-                          scope="row"
-                        >
-                          <IconButton variant="outlined" color="inherit" style={{ height: '36px' }}
-                            >
-                              <CancelOutlinedIcon onClick={(e) => deleteRecord(e,row.id)} />
-                            </IconButton>
-                        </TableCell>
+                    <TableCell colSpan={6} />
                   </TableRow>
-                );
-              }
-              )}
-              {emptyRows > 0 && (
-                <TableRow
-                  style={{
-                    height: (53) * emptyRows,
-                  }}
-                >
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25]}
-          component="div"
-          count={rows && rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </Paper>
-    </Box>
-    <InputForm handleClose={handleClose} open={open} editData={editRowData}/>
+                )}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[10, 25]}
+            component="div"
+            count={rows && rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </Paper>
+      </Box>
+      <InputForm handleClose={handleClose} open={open} editData={editRowData} />
     </>
   );
 }
