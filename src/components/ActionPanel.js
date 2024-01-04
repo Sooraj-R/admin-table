@@ -16,8 +16,6 @@ import { filterByBranch as filterByBranchAction, filterByType as filterByTypeAct
 const ActionPanel = (props) => {
     const { filterByBranch, filterByType, filterByStatus, dashBoardData, filteredData, setInitialData, setId, filteredToDate, filteredFromDate } = props
     const [row, setRow] = useState(dashBoardData.dashBoardData)
-    // const [toDate, setToDate] = useState()
-    // const [fromDate, setFromDate] = useState()
     useEffect(() => {
         setRow(dashBoardData.dashBoardData)
     }, [dashBoardData])

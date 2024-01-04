@@ -31,16 +31,6 @@
       "status": "pending"
     },
     {
-      "id": 44444,
-      "date": "10/19/2023",
-      "branch": "thane",
-      "type": "full",
-      "amount": "53000",
-      "bank": "HDFC BANK",
-      "request_by": "Rajesh",
-      "status": "pending"
-    },
-    {
       "id": 55555,
       "date": "12/01/2023",
       "branch": "kurla",
@@ -89,8 +79,7 @@
       "bank": "HDFC BANK",
       "request_by": "Suraj Rajesh444",
       "status": "approved"
-    }
-    ,
+    },
     {
       "id": 10173,
       "date": "01/05/2024",
@@ -189,6 +178,16 @@
       "amount": "2323",
       "bank": "HDFC BANK",
       "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 11176,
+      "date": "01/05/2024",
+      "branch": "mumbai",
+      "type": "short",
+      "amount": "121",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh",
       "status": "approved"
     }
   ]

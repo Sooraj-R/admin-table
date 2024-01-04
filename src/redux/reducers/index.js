@@ -1,8 +1,8 @@
 import DashboardReducer from './DashboardReducer'
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 
 export default combineReducers(
     {
-       dashBoardData : DashboardReducer
+        dashBoardData: DashboardReducer
     }
 );
