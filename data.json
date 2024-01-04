@@ -1,0 +1,195 @@
+{
+  "admin_dashboard": [
+    {
+      "id": 11111,
+      "date": "01/04/2024",
+      "branch": "mumbai",
+      "type": "short",
+      "amount": "232323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh21",
+      "status": "approved"
+    },
+    {
+      "id": 22222,
+      "date": "10/19/2023",
+      "branch": "kurla",
+      "type": "full",
+      "amount": "53000",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh1",
+      "status": "pending"
+    },
+    {
+      "id": 33333,
+      "date": "10/19/2023",
+      "branch": "thane",
+      "type": "full",
+      "amount": "53000",
+      "bank": "HDFC BANK",
+      "requested_by": "Suraj Rajesh",
+      "status": "pending"
+    },
+    {
+      "id": 44444,
+      "date": "10/19/2023",
+      "branch": "thane",
+      "type": "full",
+      "amount": "53000",
+      "bank": "HDFC BANK",
+      "request_by": "Rajesh",
+      "status": "pending"
+    },
+    {
+      "id": 55555,
+      "date": "12/01/2023",
+      "branch": "kurla",
+      "type": "full",
+      "amount": "53000",
+      "bank": "HDFC BANK",
+      "requested_by": "Suraj Rajesh",
+      "status": "pending"
+    },
+    {
+      "id": 66666,
+      "date": "01/01/2024",
+      "branch": "thane",
+      "type": "full",
+      "amount": "53000",
+      "bank": "HDFC BANK",
+      "requested_by": "Suraj Rajesh",
+      "status": "pending"
+    },
+    {
+      "id": 11143,
+      "date": "01/01/2023",
+      "branch": "vile parle",
+      "type": "short",
+      "amount": "4333",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh",
+      "status": "rejected"
+    },
+    {
+      "id": 11144,
+      "date": "01/04/2024",
+      "branch": "vile parle",
+      "type": "short",
+      "amount": "4333",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh",
+      "status": "rejected"
+    },
+    {
+      "id": 11173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    }
+    ,
+    {
+      "id": 10173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 21173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 31173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 41173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 51173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 61173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 71173,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 71188,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 71198,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    },
+    {
+      "id": 71199,
+      "date": "01/05/2024",
+      "branch": "navi mumbai",
+      "type": "short",
+      "amount": "2323",
+      "bank": "HDFC BANK",
+      "request_by": "Suraj Rajesh444",
+      "status": "approved"
+    }
+  ]
+}

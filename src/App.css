@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiDialog-paperScrollPaper {
+  width: 100% !important;
+  max-width: 600px !important;
+  height: 75%;
+}
+.MuiInputBase-adornedEnd{
+  border-radius: 0 !important;
+}
+.MuiInputBase-adornedEnd > fieldset{
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: rgb(148, 148, 148, 1);
+}
+.MuiInputBase-adornedEnd > input{
+  padding: 0px 14px 4.5px 12px;
+  margin-top: 14px;
+}
+
+.MuiPaper-rounded{
+  box-shadow: none !important;
+}
+.MuiOutlinedInput-notchedOutline{
+  border-color: rgb(148 148 148,1) !important;
+}
