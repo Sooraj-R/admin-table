@@ -19,13 +19,6 @@ const editRecord = (payload) => (
     }
 );
 
-const setEditRecord = (payload) => (
-    {
-        type: types.SET_EDIT_RECORD,
-        payload
-    }
-);
-
 const deleteRecord = (payload) => (
     {
         type: types.DELETE_RECORD,
@@ -57,13 +50,6 @@ const setAddRecord = (payload) => (
 const sortByDate = (payload) => (
     {
         type: types.SORT_BY_DATE,
-        payload
-    }
-);
-
-const searchRecord = (payload) => (
-    {
-        type: types.SEARCH_RECORD,
         payload
     }
 );
@@ -124,13 +110,11 @@ export {
     getInitialData,
     setInitialData,
     editRecord,
-    setEditRecord,
     deleteRecord,
     setDeleteRecord,
     addRecord,
     setAddRecord,
     sortByDate,
-    searchRecord,
     filterByType,
     filterByStatus,
     filterByBranch,
