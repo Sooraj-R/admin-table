@@ -1,6 +1,4 @@
 # Getting Started with Create React App
-### Reload application once json-server has been started, reason for this is that both UI and Server are getting initiated by single 'npm start' command and it takes longer to start server than front end.
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

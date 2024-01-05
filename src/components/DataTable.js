@@ -244,6 +244,7 @@ const DataTable = (props) => {
                             scope="row"
                             onClick={(event) => handleClick(event, row.id)}
                             align={k === 'amount' ? "right" : "left"}
+                            sx = {{fontWeight: k === 'id' ? 'bold !important': 500}}
                           >
                             {capitalize(row[k])}
                           </TableCell>)
